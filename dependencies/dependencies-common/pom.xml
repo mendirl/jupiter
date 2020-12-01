@@ -32,16 +32,7 @@
         <docker.image.version>${project.version}</docker.image.version>
 
         <!-- for surefire and failsafe plugins combine with jacoco https://www.eclemma.org/jacoco/trunk/doc/prepare-agent-mojo.html -->
-        <!-- <argLine>&#45;&#45;enable-preview</argLine> -->
-
-        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api &ndash;&gt;-->
-        <!-- <jaxb.version>2.3.2</jaxb.version>-->
-        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.spark/spark-sql &ndash;&gt;-->
-        <!-- <spark.version>2.3.0</spark.version>-->
-        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.parquet/parquet-avro &ndash;&gt;-->
-        <!-- <parquet.version>1.8.2</parquet.version>-->
-        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common &ndash;&gt;-->
-        <!-- <hadoop-common.version>2.6.5</hadoop-common.version>-->
+        <argLine>--enable-preview</argLine>
     </properties>
 
     <dependencyManagement>
@@ -87,7 +78,7 @@
                     <configuration>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
-                        <!-- <compilerArgs>&#45;&#45;enable-preview</compilerArgs> -->
+                        <compilerArgs>--enable-preview</compilerArgs>
                     </configuration>
                 </plugin>
                 <plugin>
