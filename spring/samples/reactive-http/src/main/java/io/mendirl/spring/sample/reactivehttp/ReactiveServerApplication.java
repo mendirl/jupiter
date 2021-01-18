@@ -1,4 +1,4 @@
-package io.mendirl.quarkus.sample.reactivehttp;
+package io.mendirl.spring.sample.reactivehttp;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

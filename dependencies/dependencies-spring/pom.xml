@@ -123,6 +123,7 @@
                     <!-- https://kotlinlang.org/docs/reference/using-maven.html -->
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
+                    <version>${kotlin.version}</version>
                     <executions>
                         <execution>
                             <id>compile</id>
@@ -252,10 +253,6 @@
                                 <phase>package</phase>
                             </execution>
                         </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
