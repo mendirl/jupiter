@@ -7,6 +7,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -14,6 +16,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
@@ -158,12 +161,15 @@ class OnStartUp {
 //        var response3 = httpClient.sendAsync(request3, HttpResponse.BodyHandlers.ofString());
 //        response3.thenAccept(response -> log.info("HttpClient reactive infinity flux sse:" + response.body()));
 
-//        var request4 = HttpRequest.newBuilder(URI.create("http://localhost:8080/greetingsinfinityfluxassse"))
-//            .GET()
-//            .header(HttpHeaders.ACCEPT, MediaType.TEXT_EVENT_STREAM_VALUE)
-//            .build();
-//        httpClient
-//            .sendAsync(request4, HttpResponse.BodyHandlers.ofString())
+        var request4 = HttpRequest.newBuilder(URI.create("http://localhost:8080/greetingsinfinityfluxassse"))
+            .GET()
+            .header(HttpHeaders.ACCEPT, MediaType.TEXT_EVENT_STREAM_VALUE)
+            .build();
+        var completableFuture = httpClient
+            .sendAsync(request4, HttpResponse.BodyHandlers.ofString());
+
+
+
 //            .thenAccept(response -> log.info("HttpClient reactive infinity flux sse with accept sse:" + response.body()));
 
 //        var request5 = HttpRequest

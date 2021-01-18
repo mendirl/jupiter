@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>samples</module>
+<!--        <module>samples</module>-->
         <module>services</module>
     </modules>
 

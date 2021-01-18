@@ -1,1 +1,11 @@
 GET https://eco2mix.rte-france.com/download/eco2mix/eCO2mix_RTE_energie_M.zip
+
+
+###
+
+### opendata.reseaux-energies.fr/api/v1/console/datasets/1.0/search/
+GET https://opendata.reseaux-energies.fr/oauth2/authorize/?client_id=d948e69067a648368aff961aebd51622&redirect_uri=http://localhost:8081/oauth2/redirect&response_type=code&state=ilovedata&scope=all
+
+
+###
+GET https://opendata.reseaux-energies.fr/api/records/1.0/search/?dataset=eco2mix-regional-cons-def&q=&facet=libelle_region&facet=nature&facet=date_heure

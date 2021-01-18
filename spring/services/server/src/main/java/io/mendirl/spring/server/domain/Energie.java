@@ -1,11 +1,14 @@
 package io.mendirl.spring.server.domain;
 
 import com.opencsv.bean.CsvBindByName;
-import com.opencsv.bean.CsvIgnore;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 @Data
 public class Energie {
+
+    @Id
+    private Long id;
 
     @CsvBindByName(column = "Mois")
     private String date;

@@ -19,3 +19,8 @@ logging:
 spring:
   mvc.log-request-details: true
   output.ansi.enabled: DETECT
+  r2dbc:
+    name: eco2mix
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres

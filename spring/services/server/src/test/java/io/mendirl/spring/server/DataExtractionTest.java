@@ -3,10 +3,8 @@ package io.mendirl.spring.server;
 
 import io.mendirl.spring.server.domain.Energie;
 import io.mendirl.spring.server.domain.Puissance;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.core.io.buffer.DefaultDataBufferFactory;
 
 import java.io.IOException;
