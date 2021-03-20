@@ -18,10 +18,11 @@ class ProducerClient(
         const val STREAM = "Stream"
     }
 
-    fun position() = webClient.get()
-        .uri("/api/position")
-        .retrieve()
-        .bodyToMono(Position::class.java)
+    fun position() =
+        webClient.get()
+            .uri("/api/position")
+            .retrieve()
+            .bodyToMono(Position::class.java)
 
     fun message() =
         rsocketClient.route("request-response")

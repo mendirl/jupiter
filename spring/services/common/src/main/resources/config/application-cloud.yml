@@ -6,6 +6,8 @@ spring:
       discovery:
         instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${random.value}
         service-name: ${spring.application.name}
+      config:
+        enabled: false
   boot:
     admin:
       discovery:
