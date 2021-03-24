@@ -212,13 +212,6 @@
                     ${docker.registry.url}/${docker.owner}/${docker.repository}/${docker.image.name}:${docker.image.version}-native
                 </spring-boot.build-image.imageName>
             </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.springframework.experimental</groupId>
-                    <artifactId>spring-native</artifactId>
-                    <version>${spring-native.version}</version>
-                </dependency>
-            </dependencies>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -237,6 +230,13 @@
                         <plugin>
                             <groupId>org.springframework.experimental</groupId>
                             <artifactId>spring-aot-maven-plugin</artifactId>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>org.springframework.experimental</groupId>
+                                    <artifactId>spring-native</artifactId>
+                                    <version>${spring-native.version}</version>
+                                </dependency>
+                            </dependencies>
                             <executions>
                                 <execution>
                                     <id>test-generate</id>
