@@ -3,6 +3,7 @@ spring:
   cloud.consul:
     host: localhost
     port: 8500
+#    discovery.hostname: localhost
 
 jupiter:
   security:
@@ -12,22 +13,32 @@ jupiter:
   applications:
     gateway:
       name: local-spring-gateway
+      client-id: ${jupiter.applications.gateway.name}
+      client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d854
       port: 7777
       url: http://localhost:${jupiter.applications.gateway.port}
     server:
       name: local-spring-server
+      client-id: ${jupiter.applications.server.name}
+      client-secret: notdefined
       port: 7070
       url: http://localhost:${jupiter.applications.server.port}
     client:
       name: local-spring-client
+      client-id: ${jupiter.applications.client.name}
+      client-secret: notdefined
       port: 7071
       url: http://localhost:${jupiter.applications.client.port}
     producer:
       name: local-spring-producer
+      client-id: ${jupiter.applications.producer.name}
+      client-secret: notdefined
       port: 7072
       url: http://localhost:${jupiter.applications.producer.port}
     consumer:
       name: local-spring-consumer
+      client-id: ${jupiter.applications.consumer.name}
+      client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d854
       port: 7073
       url: http://localhost:${jupiter.applications.consumer.port}
 

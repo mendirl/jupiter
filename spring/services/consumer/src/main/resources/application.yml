@@ -11,7 +11,7 @@ spring:
     registration:
       consumer-client:
         provider: keycloak
-        client-id: ${jupiter.applications.consumer.name}
-        client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d854
+        client-id: ${jupiter.applications.consumer.client-id}
+        client-secret: ${jupiter.applications.consumer.client-secret}
         authorization-grant-type: client_credentials
         scope: position
