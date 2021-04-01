@@ -18,7 +18,6 @@ public class WebController {
     @Inject
     Logger logger;
 
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed({"position"})
