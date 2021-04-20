@@ -1,11 +1,14 @@
 spring.profiles.group:
   local:
-    - default
+    - common
+    - app-local
+  local-cloud:
+    - common
     - cloud
     - app-local
     - app-cloud
   dev:
-    - default
+    - common
     - cloud
     - app-dev
     - app-cloud

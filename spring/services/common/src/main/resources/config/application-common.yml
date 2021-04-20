@@ -3,7 +3,9 @@ debug: false
 spring:
   config.activate.on-profile: local
   main.banner-mode: off
-  cloud.consul.enabled: false
+  cloud.consul:
+    enabled: false
+    config.enabled: false
   boot.admin.discovery.enabled: false
 
 management:
