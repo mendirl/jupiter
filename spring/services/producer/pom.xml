@@ -73,8 +73,8 @@
         </dependency>
         <!-- TEST DEPENDENCIES -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>io.mendirl</groupId>
+            <artifactId>spring-common-test</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

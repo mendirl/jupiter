@@ -30,7 +30,11 @@
                 <artifactId>spring-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>io.mendirl</groupId>
+                <artifactId>spring-common-test</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>

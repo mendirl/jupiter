@@ -14,6 +14,8 @@ management:
 
 logging.level:
   root: INFO
+#  org.springframework: DEBUG
+#  org.springframework.boot: TRACE
 #  org.springframework.cloud.gateway: DEBUG
 #  org.springframework.security: DEBUG
 #  org.springframework.messaging: DEBUG
