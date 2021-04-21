@@ -1,7 +1,7 @@
 debug: false
 
 spring:
-  config.activate.on-profile: local
+  config.activate.on-profile: common
   main.banner-mode: off
   cloud.consul:
     enabled: false

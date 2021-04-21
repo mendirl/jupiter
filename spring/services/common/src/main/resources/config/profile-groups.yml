@@ -1,4 +1,7 @@
 spring.profiles.group:
+  test:
+    - common
+    - app-local
   local:
     - common
     - app-local
@@ -8,6 +11,9 @@ spring.profiles.group:
     - app-local
     - app-cloud
   dev:
+    - common
+    - app-dev
+  dev-cloud:
     - common
     - cloud
     - app-dev
