@@ -1,5 +1,6 @@
 package io.mendirl.spring.services.producer
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.mockito.BDDMockito.given
 import org.springframework.beans.factory.annotation.Autowired
@@ -24,6 +25,7 @@ import java.time.Instant
 @WebFluxTest(excludeAutoConfiguration = [ReactiveOAuth2ResourceServerAutoConfiguration::class])
 @Import(value = [WebController::class])
 @ActiveProfiles(value = ["test"])
+@Disabled
 class WebControllerTest {
 
     @MockBean

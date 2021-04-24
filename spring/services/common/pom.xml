@@ -46,6 +46,11 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-reflect</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.mendirl</groupId>
+            <artifactId>spring-common-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

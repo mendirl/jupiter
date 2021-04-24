@@ -5,5 +5,4 @@ import org.springframework.test.context.ActiveProfiles
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles(value = ["test"])
-open class BaseTestClass {
-}
+class BaseTestClass
