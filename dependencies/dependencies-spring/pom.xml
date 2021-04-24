@@ -21,6 +21,7 @@
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
         <spring-boot.version>2.4.5</spring-boot.version>
         <spring-native.version>0.9.2</spring-native.version>
+        <spring-cloud-contract.version>3.0.2</spring-cloud-contract.version>
     </properties>
 
     <dependencyManagement>
@@ -112,6 +113,17 @@
                     <groupId>org.springframework.experimental</groupId>
                     <artifactId>spring-aot-maven-plugin</artifactId>
                     <version>${spring-native.version}</version>
+                </plugin>
+                <plugin>
+                    <!-- https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract-maven-plugin/plugin-info.html -->
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-contract-maven-plugin</artifactId>
+                    <version>${spring-cloud-contract.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <testFramework>JUNIT5</testFramework>
+                        <testMode>WEBTESTCLIENT</testMode>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>

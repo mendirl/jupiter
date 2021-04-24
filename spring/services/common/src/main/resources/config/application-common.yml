@@ -1,8 +1,11 @@
 debug: false
 
+server.shutdown: graceful
+
 spring:
   config.activate.on-profile: common
   main.banner-mode: off
+  lifecycle.timeout-per-shutdown-phase: 20s
   cloud.consul:
     enabled: false
     config.enabled: false

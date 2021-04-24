@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
 import org.springframework.boot.test.mock.mockito.MockBean
 import org.springframework.context.annotation.Import
 import org.springframework.http.MediaType
+import org.springframework.security.test.context.support.WithAnonymousUser
 import org.springframework.security.test.context.support.WithMockUser
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
@@ -48,4 +49,15 @@ class WebControllerTest {
             .jsonPath("@.name").isEqualTo("position 123456")
             .jsonPath("@.date").isNotEmpty
     }
+
+    @Test
+    @WithAnonymousUser
+    fun `test 2`() {
+        testClient
+            .get()
+            .uri("/api/position")
+            .exchange()
+            .expectStatus().is4xxClientError
+    }
+
 }
