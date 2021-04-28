@@ -23,7 +23,7 @@ class ProducerClientTest {
         val position = client.position()
         StepVerifier.create(position)
             .expectNextMatches {
-                it.name == "position 1245"
+                it.name == "position 12345"
             }
             .verifyComplete()
 
