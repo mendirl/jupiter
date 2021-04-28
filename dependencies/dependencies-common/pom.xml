@@ -121,7 +121,8 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <jvmTarget>${java.version}</jvmTarget>
+                        <!-- TODO: will be changed to 16 in a newer kotlin version -->
+                        <jvmTarget>15</jvmTarget>
                         <javaParameters>true</javaParameters>
                         <args>
                             <arg>-Xjsr305=strict</arg>

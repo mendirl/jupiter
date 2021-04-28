@@ -131,6 +131,13 @@
                         <testFramework>JUNIT5</testFramework>
                         <testMode>WEBTESTCLIENT</testMode>
                     </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.springframework.cloud</groupId>
+                            <artifactId>spring-cloud-contract-spec-kotlin</artifactId>
+                            <version>${spring-cloud-contract.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
                 <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>
