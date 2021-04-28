@@ -22,14 +22,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- quarkus provides kotlin version 1.4.31 -->
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-bom</artifactId>
-                <version>${kotlin.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
             <dependency>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-universe-bom</artifactId>
