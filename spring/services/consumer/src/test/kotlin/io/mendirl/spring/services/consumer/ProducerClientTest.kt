@@ -1,5 +1,6 @@
 package io.mendirl.spring.services.consumer
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -12,6 +13,7 @@ import reactor.test.StepVerifier
     ids = ["io.mendirl:spring-producer:+:stubs:7072"],
     stubsMode = StubRunnerProperties.StubsMode.LOCAL
 )
+@Disabled
 class ProducerClientTest {
 
     @Autowired
