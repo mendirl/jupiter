@@ -100,7 +100,7 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-contract-maven-plugin</artifactId>
                 <configuration>
-                    <baseClassForTests>io.mendirl.spring.services.producer.ProducerBaseTestClass</baseClassForTests>
+                    <baseClassForTests>io.mendirl.spring.services.producer.ProducerContractBaseTest</baseClassForTests>
                 </configuration>
             </plugin>
             <plugin>
