@@ -9,8 +9,8 @@ import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles(value = ["test"])
 @Testcontainers
+@ActiveProfiles(value = ["test"])
 class ContractBaseTest {
 
     companion object {

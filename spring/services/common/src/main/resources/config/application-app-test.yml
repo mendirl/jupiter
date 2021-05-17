@@ -1,0 +1,11 @@
+#redifined client-secret for tests purpose (with testcontainers)
+
+spring:
+  config.activate.on-profile: app-test
+
+jupiter:
+  applications:
+    gateway:
+      client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d854
+    consumer:
+      client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d855

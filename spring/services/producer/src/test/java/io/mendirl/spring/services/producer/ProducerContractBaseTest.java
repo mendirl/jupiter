@@ -19,7 +19,6 @@ import reactor.core.publisher.Mono;
 
 import java.time.Instant;
 
-import static com.toomuchcoding.jsonassert.JsonAssertion.assertThatJson;
 import static io.restassured.module.webtestclient.RestAssuredWebTestClient.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -46,7 +45,7 @@ class ProducerContractBaseTest extends ContractBaseTest {
     }
 
     @Test
-    @Disabled
+    @Disabled("duplicated from ContractVerifierTest")
     void test() {
         // given:
         WebTestClientRequestSpecification request = given()
@@ -61,7 +60,9 @@ class ProducerContractBaseTest extends ContractBaseTest {
         assertThat(response.header("Content-Type")).matches("application/json.*");
         // and:
         DocumentContext parsedJson = JsonPath.parse(response.getBody().asString());
-        assertThatJson(parsedJson).field("['name']").isEqualTo("position 123456");
+        assertThat(parsedJson.read("$.name", String.class)).matches("position [0-9]{5}");
+        assertThat(parsedJson.read("$.date", String.class)).matches("[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]*Z");
+
     }
 
 }
