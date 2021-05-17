@@ -11,6 +11,9 @@ spring:
     config.enabled: false
   boot.admin.discovery.enabled: false
 
+# same as default with line number
+logging.pattern.console: ${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%logger:%L){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}
+
 management:
   endpoints.web.exposure.include: "*"
   endpoint.health.show-details: ALWAYS
