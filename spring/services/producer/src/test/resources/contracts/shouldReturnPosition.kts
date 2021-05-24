@@ -5,6 +5,7 @@ import org.springframework.http.MediaType
 import java.time.Instant
 
 contract {
+    ignored = true
     name = "should return a position"
     request {
         url = url("/api/position")
