@@ -5,7 +5,7 @@
     <parent>
         <groupId>io.mendirl</groupId>
         <artifactId>dependencies-common</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>1.4.2</version>
         <relativePath>../dependencies/dependencies-common</relativePath>
     </parent>
 
