@@ -1,7 +1,7 @@
 name: Release
 
 on:
-  push: { branches: release }
+  push: { branches: [ release ] }
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -28,6 +28,6 @@ jobs:
       - name: Build and Publish to GitHub Packages
         run: mvn -B release:prepare release:perform -PdockerPush
         env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REGISTRY_USERNAME: ${{ github.actor }}
           REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
