@@ -1,6 +1,7 @@
 package io.mendirl.spring.services.producer
 
 import dasniko.testcontainers.keycloak.KeycloakContainer
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.mockito.BDDMockito.given
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,12 +20,13 @@ import org.testcontainers.junit.jupiter.Testcontainers
 import reactor.kotlin.core.publisher.toMono
 import java.time.Instant
 
+@Disabled
 @WebFluxTest
 @Testcontainers
-@ActiveProfiles(value = ["test"])
 @ContextConfiguration(
     classes = [WebController::class, ProducerSecurityConfiguration::class]
 )
+@ActiveProfiles(value = ["test"])
 class WebControllerTest {
 
     companion object {

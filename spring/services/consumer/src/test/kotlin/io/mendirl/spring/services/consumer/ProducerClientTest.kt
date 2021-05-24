@@ -1,6 +1,7 @@
 package io.mendirl.spring.services.consumer
 
 import dasniko.testcontainers.keycloak.KeycloakContainer
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -13,8 +14,9 @@ import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
 import reactor.test.StepVerifier
 
-@Testcontainers
+@Disabled
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@Testcontainers
 @AutoConfigureStubRunner(
     ids = ["io.mendirl:spring-producer:+:stubs:7072"],
     stubsMode = StubRunnerProperties.StubsMode.LOCAL
