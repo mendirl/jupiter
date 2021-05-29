@@ -247,6 +247,43 @@
                     </executions>
                 </plugin>
                 <plugin>
+                    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-checkstyle-plugin -->
+                    <!-- https://maven.apache.org/plugins/maven-checkstyle-plugin/index.html -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>3.1.2</version>
+                    <dependencies>
+                        <dependency>
+                            <!-- https://mvnrepository.com/artifact/com.puppycrawl.tools/checkstyle -->
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>8.42</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>io.spring.javaformat</groupId>
+                            <artifactId>spring-javaformat-checkstyle</artifactId>
+                            <version>0.0.28</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>checkstyle-validation</id>
+                            <phase>validate</phase>
+                            <inherited>true</inherited>
+                            <configuration>
+                                <configLocation>src/main/resources/checkstyle_spring.xml</configLocation>
+                                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                            </configuration>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <!--                    <configuration>-->
+                    <!--                        <configLocation>checkstyle.xml</configLocation>-->
+                    <!--                    </configuration>-->
+                </plugin>
+                <plugin>
                     <!-- https://mvnrepository.com/artifact/org.jacoco/jacoco-maven-plugin -->
                     <!-- https://www.eclemma.org/jacoco/trunk/doc/maven.html -->
                     <groupId>org.jacoco</groupId>
@@ -300,9 +337,27 @@
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
                     </plugin>
+                    <!--                    <plugin>-->
+                    <!--                        <groupId>org.sonarsource.scanner.maven</groupId>-->
+                    <!--                        <artifactId>sonar-maven-plugin</artifactId>-->
+                    <!--                    </plugin>-->
                     <plugin>
-                        <groupId>org.sonarsource.scanner.maven</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-checkstyle-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>io.spring.javaformat</groupId>
+                        <artifactId>spring-javaformat-maven-plugin</artifactId>
+                        <version>0.0.28</version>
+                        <executions>
+                            <execution>
+                                <phase>validate</phase>
+                                <inherited>true</inherited>
+                                <goals>
+                                    <goal>validate</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>
