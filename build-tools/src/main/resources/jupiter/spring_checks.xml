@@ -5,8 +5,8 @@
 <module name="com.puppycrawl.tools.checkstyle.Checker">
     <!-- Root Checks -->
     <module name="com.puppycrawl.tools.checkstyle.checks.header.RegexpHeaderCheck">
-        <!--        <property name="headerFile" value="${checkstyle.header.file}" />-->
-        <property name="fileExtensions" value="java,kt"/>
+        <property name="headerFile" value="${checkstyle.header.file}"/>
+        <property name="fileExtensions" value="java"/>
     </module>
     <module name="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 
