@@ -17,14 +17,15 @@
     <properties>
         <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-universe-bom -->
         <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-maven-plugin -->
-        <quarkus.version>1.13.7.Final</quarkus.version>
+        <quarkus.version>2.0.0.CR3</quarkus.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.quarkus</groupId>
-                <artifactId>quarkus-universe-bom</artifactId>
+                <!--                <artifactId>quarkus-universe-bom</artifactId>-->
+                <artifactId>quarkus-bom</artifactId>
                 <version>${quarkus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
