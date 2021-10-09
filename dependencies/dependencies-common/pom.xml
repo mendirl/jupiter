@@ -121,7 +121,7 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <jvmTarget>${java.version}</jvmTarget>
+                        <jvmTarget>16</jvmTarget>
                         <javaParameters>true</javaParameters>
                         <args>
                             <arg>-Xjsr305=strict</arg>
