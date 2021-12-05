@@ -1,5 +1,7 @@
 [![Project Build Status][github-actions-image]][github-actions-url]
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=io.mendirl%3Ajupiter-parent&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=io.mendirl%3Ajupiter-parent)
+
 [github-actions-url]: https://github.com/mendirl/project/actions
 
 [github-actions-image]: https://github.com/mendirl/project/workflows/Java%20CI/badge.svg
