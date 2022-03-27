@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.mendirl</groupId>
         <artifactId>quarkus</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>quarkus-samples</artifactId>

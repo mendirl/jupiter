@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.mendirl</groupId>
         <artifactId>spring-services</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>spring-producer</artifactId>
@@ -70,6 +70,11 @@
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-coroutines-reactor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
         </dependency>
         <!-- TEST DEPENDENCIES -->
         <dependency>

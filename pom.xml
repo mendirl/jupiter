@@ -5,9 +5,13 @@
 
     <groupId>io.mendirl</groupId>
     <artifactId>jupiter-parent</artifactId>
-    <version>999-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <packaging>pom</packaging>
+
+    <properties>
+        <revision>999-SNAPSHOT</revision>
+    </properties>
 
     <modules>
         <module>dependencies</module>

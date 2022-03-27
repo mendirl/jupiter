@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.mendirl</groupId>
         <artifactId>dependencies-spring</artifactId>
-        <version>999-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../dependencies/dependencies-spring</relativePath>
     </parent>
 
