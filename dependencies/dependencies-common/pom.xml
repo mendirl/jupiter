@@ -15,7 +15,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <kotlin.version>1.6.20</kotlin.version>
+        <kotlin.version>1.6.21</kotlin.version>
         <resource.delimiter>@</resource.delimiter> <!-- delimiter that doesn't clash with Spring ${} placeholders -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -213,7 +213,7 @@
                     <!-- https://maven.apache.org/plugins/maven-javadoc-plugin/ -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.3.2</version>
+                    <version>3.4.0</version>
                     <executions>
                         <execution>
                             <id>attach-javadocs</id>
