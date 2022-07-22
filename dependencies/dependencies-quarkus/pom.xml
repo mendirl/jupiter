@@ -17,7 +17,7 @@
     <properties>
         <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-universe-bom -->
         <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-maven-plugin -->
-        <quarkus.version>2.11.0.Final</quarkus.version>
+        <quarkus.version>2.10.3.Final</quarkus.version>
     </properties>
 
     <dependencyManagement>
@@ -44,14 +44,15 @@
                         <source>${java.version}</source>
                         <target>${java.version}</target>
                         <compilerArgs>
-                            <!-- <arg>&#45;&#45;enable-preview</arg> -->
+                            <arg>-parameters</arg>
                         </compilerArgs>
-                        <!-- <jvmArgs>&#45;&#45;enable-preview</jvmArgs> -->
                     </configuration>
                     <executions>
                         <execution>
                             <goals>
                                 <goal>build</goal>
+                                <goal>generate-code</goal>
+                                <goal>generate-code-tests</goal>
                             </goals>
                         </execution>
                     </executions>
@@ -84,12 +85,21 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <configuration>
-                        <systemPropertyVariables>
-                            <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
-                            <maven.home>${maven.home}</maven.home>
-                        </systemPropertyVariables>
-                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                            <configuration>
+                                <systemPropertyVariables>
+                                    <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+                                    <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                                    <maven.home>${maven.home}</maven.home>
+                                </systemPropertyVariables>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
             </plugins>
         </pluginManagement>
