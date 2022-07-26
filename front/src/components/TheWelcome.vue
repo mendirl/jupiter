@@ -30,9 +30,7 @@ import SupportIcon from "./icons/IconSupport.vue";
         <a href="https://code.visualstudio.com/" target="_blank">VSCode</a> +
         <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>. If you need to test your components
         and web pages, check out <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
-        <a href="https://docs.cypress.io/guides/component-testing/introduction" target="_blank"
-            >Cypress Component Testing</a
-        >.
+        <a href="https://on.cypress.io/component" target="_blank">Cypress Component Testing</a>.
 
         <br />
 
