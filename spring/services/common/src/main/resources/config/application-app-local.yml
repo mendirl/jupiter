@@ -1,20 +1,20 @@
 spring:
   config.activate.on-profile: app-local
-  cloud.consul:
-    host: localhost
-    port: 8500
-#    discovery.hostname: localhost
-
+  cloud:
+    consul:
+      host: 192.168.1.120
+      port: 8500
+#      path: consul
 jupiter:
   security:
     oauth2:
-      url: http://localhost:8080/auth/realms/JupiterR
+      url: http://192.168.1.120/security/realms/JupiterR
       user-name-attribute: preferred_username
   applications:
     gateway:
       name: local-spring-gateway
       client-id: ${jupiter.applications.gateway.name}
-      client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d854
+      client-secret: qFjiUgyEsuaQuQhb5zbhso0Da96IDoj5
       port: 7777
       url: http://localhost:${jupiter.applications.gateway.port}
     server:
@@ -38,7 +38,12 @@ jupiter:
     consumer:
       name: local-spring-consumer
       client-id: ${jupiter.applications.consumer.name}
-      client-secret: 7ce920b9-ea33-461c-bf28-c6791b75d854
+      client-secret: 4PbJqjT0wEWtcZSgy0vVHJERYPDg5ctE
       port: 7073
       url: http://localhost:${jupiter.applications.consumer.port}
 
+logging:
+  level:
+    root: info
+    web: info
+    org.springframework.cloud.gateway: debug

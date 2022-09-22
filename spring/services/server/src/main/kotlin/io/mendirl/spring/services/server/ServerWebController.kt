@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import reactor.core.publisher.Mono
+import java.security.Principal
 
 @RestController
 @RequestMapping("/callme")
@@ -13,7 +14,7 @@ class ServerWebController {
 
     @PreAuthorize("hasAuthority('SCOPE_profile')")
     @GetMapping("/ping")
-    fun ping(): Mono<String> =
+    fun ping(principal: Principal): Mono<String> =
         ReactiveSecurityContextHolder.getContext()
             .map { "${it.authentication.name} has scopes: ${it.authentication.authorities}" }
 

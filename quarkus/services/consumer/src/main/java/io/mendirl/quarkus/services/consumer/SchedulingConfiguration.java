@@ -16,7 +16,7 @@ public class SchedulingConfiguration {
 
     @Inject
     @RestClient
-    private ProducerClient client;
+    ProducerClient client;
 
     @Scheduled(delay = 1, delayUnit = TimeUnit.SECONDS, every = "1s")
     public void scheduledWeb() {
