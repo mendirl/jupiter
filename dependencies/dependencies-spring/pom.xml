@@ -69,7 +69,7 @@
                 <!-- https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-webflux-ui -->
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-webflux-ui</artifactId>
-                <version>1.6.12</version>
+                <version>1.6.14</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
