@@ -35,7 +35,7 @@
         <!-- for surefire and failsafe plugins combine with jacoco https://www.eclemma.org/jacoco/trunk/doc/prepare-agent-mojo.html -->
         <!-- <argLine>&#45;&#45;enable-preview</argLine> -->
 
-        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api &ndash;&gt;-->
+        <!-- &lt;!&ndash; https://mvnrepository.com/artifact/jakarta.xml.bind/jaxb-api &ndash;&gt;-->
         <!-- <jaxb.version>2.3.2</jaxb.version>-->
         <!-- &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.spark/spark-sql &ndash;&gt;-->
         <!-- <spark.version>2.3.0</spark.version>-->
