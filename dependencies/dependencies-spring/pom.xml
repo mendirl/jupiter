@@ -21,7 +21,7 @@
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
         <spring-boot.version>3.0.7</spring-boot.version>
         <spring-native.version>0.12.2</spring-native.version>
-        <spring-cloud-contract.version>4.0.2</spring-cloud-contract.version>
+        <spring-cloud-contract.version>4.0.3</spring-cloud-contract.version>
     </properties>
 
     <dependencyManagement>
@@ -47,7 +47,7 @@
                 <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>2022.0.2</version>
+                <version>2022.0.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
