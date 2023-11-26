@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM busybox:latest
+FROM ubuntu:latest
 
 ARG USERNAME=mendirl
 ARG USER_UID=1000
