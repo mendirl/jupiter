@@ -18,8 +18,18 @@
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-rest-client-jackson</artifactId>
+            <artifactId>quarkus-oidc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-jackson</artifactId>
+        </dependency>
+
+
+<!--        <dependency>-->
+<!--            <groupId>io.quarkus</groupId>-->
+<!--            <artifactId>quarkus-rest-client-jackson</artifactId>-->
+<!--        </dependency>-->
         <!-- TODO: replaced by, in a further version :-->
         <!--        <dependency>-->
         <!--            <groupId>io.quarkus</groupId>-->
@@ -27,7 +37,7 @@
         <!--        </dependency>-->
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-oidc-client-filter</artifactId>
+            <artifactId>quarkus-resteasy-client-oidc-filter</artifactId>
         </dependency>
     </dependencies>
 

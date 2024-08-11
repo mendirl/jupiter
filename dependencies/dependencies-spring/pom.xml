@@ -109,11 +109,6 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.springframework.experimental</groupId>
-                    <artifactId>spring-aot-maven-plugin</artifactId>
-                    <version>${spring-native.version}</version>
-                </plugin>
-                <plugin>
                     <!-- https://cloud.spring.io/spring-cloud-contract/spring-cloud-contract-maven-plugin/plugin-info.html -->
                     <groupId>org.springframework.cloud</groupId>
                     <artifactId>spring-cloud-contract-maven-plugin</artifactId>

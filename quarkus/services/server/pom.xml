@@ -12,6 +12,8 @@
     <artifactId>quarkus-server</artifactId>
 
     <dependencies>
+
+
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-mutiny</artifactId>
