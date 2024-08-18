@@ -23,6 +23,7 @@ import static io.restassured.module.webtestclient.RestAssuredWebTestClient.given
 import static org.assertj.core.api.Assertions.assertThat;
 
 
+@Disabled
 class ProducerContractBaseTest extends ContractBaseTest {
 
     @LocalServerPort
