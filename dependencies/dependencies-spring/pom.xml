@@ -19,7 +19,7 @@
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
-        <spring-boot.version>3.4.3</spring-boot.version>
+        <spring-boot.version>3.4.4</spring-boot.version>
         <spring-native.version>0.12.2</spring-native.version>
         <spring-cloud-contract.version>4.2.1</spring-cloud-contract.version>
     </properties>
