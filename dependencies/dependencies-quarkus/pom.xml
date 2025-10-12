@@ -40,34 +40,61 @@
                     <groupId>io.quarkus</groupId>
                     <artifactId>quarkus-maven-plugin</artifactId>
                     <version>${quarkus.version}</version>
-                    <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
-                        <compilerArgs>
-                            <arg>-parameters</arg>
-                        </compilerArgs>
-                    </configuration>
+                    <extensions>true</extensions>
                     <executions>
                         <execution>
                             <goals>
                                 <goal>build</goal>
                                 <goal>generate-code</goal>
                                 <goal>generate-code-tests</goal>
+                                <goal>native-image-agent</goal>
                             </goals>
                         </execution>
                     </executions>
                 </plugin>
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.14.1</version>
+                    <configuration>
+                        <parameters>true</parameters>
+                    </configuration>
+                </plugin>
+                <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
+                    <version>${kotlin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>compile</id>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>test-compile</id>
+                            <goals>
+                                <goal>test-compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.jetbrains.kotlin</groupId>
+                            <artifactId>kotlin-maven-allopen</artifactId>
+                            <version>${kotlin.version}</version>
+                        </dependency>
+                    </dependencies>
                     <configuration>
+                        <javaParameters>true</javaParameters>
+                        <jvmTarget>${java.version}</jvmTarget>
                         <compilerPlugins>
                             <plugin>all-open</plugin>
                         </compilerPlugins>
                         <pluginOptions>
-                            <!-- Each annotation is placed on its own line -->
                             <option>all-open:annotation=jakarta.ws.rs.Path</option>
                             <option>all-open:annotation=jakarta.enterprise.context.ApplicationScoped</option>
+                            <option>all-open:annotation=jakarta.persistence.Entity</option>
                             <option>all-open:annotation=io.quarkus.test.junit.QuarkusTest</option>
                         </pluginOptions>
                     </configuration>
@@ -144,38 +171,40 @@
         <profile>
             <id>native</id>
             <properties>
-                <java.version>11</java.version>
-                <quarkus.package.type>native</quarkus.package.type>
-                <quarkus.native.container-build>true</quarkus.native.container-build>
-                <quarkus.container-image.tag>${docker.image.version}-native</quarkus.container-image.tag>
+                <quarkus.package.jar.enabled>false</quarkus.package.jar.enabled>
+                <skipITs>false</skipITs>
+                <quarkus.native.enabled>true</quarkus.native.enabled>
+                <!--                <quarkus.package.type>native</quarkus.package.type>-->
+                <!--                <quarkus.native.container-build>true</quarkus.native.container-build>-->
+                <!--                <quarkus.container-image.tag>${docker.image.version}-native</quarkus.container-image.tag>-->
             </properties>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-failsafe-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>integration-test</goal>
-                                    <goal>verify</goal>
-                                </goals>
-                                <configuration>
-                                    <systemPropertyVariables>
-                                        <native.image.path>
-                                            ${project.build.directory}/${project.build.finalName}-native-runner
-                                        </native.image.path>
-                                        <java.util.logging.manager>
-                                            org.jboss.logmanager.LogManager
-                                        </java.util.logging.manager>
-                                        <maven.home>${maven.home}</maven.home>
-                                    </systemPropertyVariables>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
+            <!--            <build>-->
+            <!--                <plugins>-->
+            <!--                    <plugin>-->
+            <!--                        <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                        <artifactId>maven-failsafe-plugin</artifactId>-->
+            <!--                        <executions>-->
+            <!--                            <execution>-->
+            <!--                                <goals>-->
+            <!--                                    <goal>integration-test</goal>-->
+            <!--                                    <goal>verify</goal>-->
+            <!--                                </goals>-->
+            <!--                                <configuration>-->
+            <!--                                    <systemPropertyVariables>-->
+            <!--                                        <native.image.path>-->
+            <!--                                            ${project.build.directory}/${project.build.finalName}-native-runner-->
+            <!--                                        </native.image.path>-->
+            <!--                                        <java.util.logging.manager>-->
+            <!--                                            org.jboss.logmanager.LogManager-->
+            <!--                                        </java.util.logging.manager>-->
+            <!--                                        <maven.home>${maven.home}</maven.home>-->
+            <!--                                    </systemPropertyVariables>-->
+            <!--                                </configuration>-->
+            <!--                            </execution>-->
+            <!--                        </executions>-->
+            <!--                    </plugin>-->
+            <!--                </plugins>-->
+            <!--            </build>-->
         </profile>
     </profiles>
 
