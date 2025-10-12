@@ -2,7 +2,6 @@ package contracts
 
 import org.springframework.cloud.contract.spec.ContractDsl.Companion.contract
 import org.springframework.http.MediaType
-import java.time.Instant
 
 contract {
     ignored = true
@@ -20,7 +19,7 @@ contract {
         body = body(
             mapOf(
                 "name" to "position 12345",
-                "date" to Instant.now().toString()
+                "date" to "2025-01-01T00:00:00.000Z"
             )
         )
 
