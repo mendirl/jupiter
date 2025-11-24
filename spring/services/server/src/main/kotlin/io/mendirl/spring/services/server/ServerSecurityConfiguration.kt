@@ -3,8 +3,9 @@ package io.mendirl.spring.services.server
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties
 import io.mendirl.spring.services.common.JupiterProperties
-import org.springframework.boot.actuate.autoconfigure.security.reactive.EndpointRequest
-import org.springframework.boot.autoconfigure.security.reactive.PathRequest
+import org.springframework.boot.security.autoconfigure.actuate.web.reactive.EndpointRequest
+import org.springframework.boot.security.autoconfigure.web.reactive.PathRequest
+
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.core.convert.converter.Converter

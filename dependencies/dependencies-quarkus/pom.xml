@@ -15,9 +15,8 @@
     <packaging>pom</packaging>
 
     <properties>
-        <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-universe-bom -->
-        <!-- https://mvnrepository.com/artifact/io.quarkus/quarkus-maven-plugin -->
-        <quarkus.version>3.30.0</quarkus.version>
+        <!-- https://mvnrepository.com/artifact/io.quarkus.platform/quarkus-bom -->
+        <quarkus.version>3.30.0.CR1</quarkus.version>
     </properties>
 
     <dependencyManagement>

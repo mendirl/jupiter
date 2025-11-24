@@ -1,6 +1,6 @@
 package io.mendirl.spring.services.producer
 
-import org.springframework.boot.actuate.autoconfigure.security.reactive.EndpointRequest
+import org.springframework.boot.security.autoconfigure.actuate.web.reactive.EndpointRequest
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.Customizer
