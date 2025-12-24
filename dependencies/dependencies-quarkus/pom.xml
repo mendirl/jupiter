@@ -16,7 +16,7 @@
 
     <properties>
         <!-- https://mvnrepository.com/artifact/io.quarkus.platform/quarkus-bom -->
-        <quarkus.version>3.30.4</quarkus.version>
+        <quarkus.version>3.30.5</quarkus.version>
     </properties>
 
     <dependencyManagement>
