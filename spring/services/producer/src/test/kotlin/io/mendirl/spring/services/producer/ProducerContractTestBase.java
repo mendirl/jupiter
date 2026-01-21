@@ -1,20 +1,24 @@
 package io.mendirl.spring.services.producer;
 
-import io.mendirl.services.common.test.contract.ContractBaseTest;
-import org.junit.jupiter.api.Disabled;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.web.server.LocalServerPort;
-import org.springframework.test.web.reactive.server.WebTestClient;
+//import org.junit.jupiter.api.Disabled;
+
+public class ProducerContractTestBase {
 
 
-@Disabled
-class ProducerContractBaseTest extends ContractBaseTest {
+//    @Autowired
+//    WebApplicationContext context;
 
-    @LocalServerPort
-    private int port;
+//    @BeforeEach
+//    public void setup() {
+////        RestAssuredMockMvc.webAppContextSetup(this.context);
+//        RestAssuredMockMvc.standaloneSetup(new WebController());
+//    }
 
-    @Autowired
-    private WebTestClient testClient;
+//    @LocalServerPort
+//    private int port;
+//
+//    @Autowired
+//    private WebTestClient testClient;
 
 //    @MockBean
 //    private PositionService positionService;

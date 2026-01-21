@@ -1,15 +1,16 @@
 package io.mendirl.services.common.test.contract
 
-import org.junit.jupiter.api.Disabled
+//import org.junit.jupiter.api.Disabled
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.ActiveProfiles
-import org.testcontainers.junit.jupiter.Testcontainers
 
-@Disabled
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Testcontainers
-@ActiveProfiles(value = ["test"])
-class ContractBaseTest {
+//import org.springframework.test.context.ActiveProfiles
+//import org.testcontainers.junit.jupiter.Testcontainers
+
+//@Disabled
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@Testcontainers
+//@ActiveProfiles(value = ["test"])
+open class ContractBaseTest {
 
 //    companion object {
 //        @Container

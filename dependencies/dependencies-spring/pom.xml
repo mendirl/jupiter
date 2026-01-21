@@ -21,7 +21,7 @@
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin -->
         <spring-boot.version>4.0.0</spring-boot.version>
         <spring-native.version>0.12.2</spring-native.version>
-        <spring-cloud-contract.version>5.0.0</spring-cloud-contract.version>
+        <spring-cloud-contract.version>4.3.0</spring-cloud-contract.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +48,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>2025.1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-contract-dependencies -->
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-contract-dependencies</artifactId>
+                <version>${spring-cloud-contract.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -114,10 +122,10 @@
                     <artifactId>spring-cloud-contract-maven-plugin</artifactId>
                     <version>${spring-cloud-contract.version}</version>
                     <extensions>true</extensions>
-                    <configuration>
-                        <testFramework>JUNIT5</testFramework>
-                        <testMode>WEBTESTCLIENT</testMode>
-                    </configuration>
+                    <!--                    <configuration>-->
+                    <!--                        <testFramework>JUNIT5</testFramework>-->
+                    <!--&lt;!&ndash;                        <testMode>WEBTESTCLIENT</testMode>&ndash;&gt;-->
+                    <!--                    </configuration>-->
                     <dependencies>
                         <dependency>
                             <groupId>org.springframework.cloud</groupId>
@@ -244,31 +252,31 @@
                                 </image>
                             </configuration>
                         </plugin>
-                        <plugin>
-                            <groupId>org.springframework.experimental</groupId>
-                            <artifactId>spring-aot-maven-plugin</artifactId>
-                            <dependencies>
-                                <dependency>
-                                    <groupId>org.springframework.experimental</groupId>
-                                    <artifactId>spring-native</artifactId>
-                                    <version>${spring-native.version}</version>
-                                </dependency>
-                            </dependencies>
-                            <executions>
-                                <execution>
-                                    <id>test-generate</id>
-                                    <goals>
-                                        <goal>test-generate</goal>
-                                    </goals>
-                                </execution>
-                                <execution>
-                                    <id>generate</id>
-                                    <goals>
-                                        <goal>generate</goal>
-                                    </goals>
-                                </execution>
-                            </executions>
-                        </plugin>
+                        <!--                        <plugin>-->
+                        <!--                            <groupId>org.springframework.experimental</groupId>-->
+                        <!--                            <artifactId>spring-aot-maven-plugin</artifactId>-->
+                        <!--                            <dependencies>-->
+                        <!--                                <dependency>-->
+                        <!--                                    <groupId>org.springframework.experimental</groupId>-->
+                        <!--                                    <artifactId>spring-native</artifactId>-->
+                        <!--                                    <version>${spring-native.version}</version>-->
+                        <!--                                </dependency>-->
+                        <!--                            </dependencies>-->
+                        <!--                            <executions>-->
+                        <!--                                <execution>-->
+                        <!--                                    <id>test-generate</id>-->
+                        <!--                                    <goals>-->
+                        <!--                                        <goal>test-generate</goal>-->
+                        <!--                                    </goals>-->
+                        <!--                                </execution>-->
+                        <!--                                <execution>-->
+                        <!--                                    <id>generate</id>-->
+                        <!--                                    <goals>-->
+                        <!--                                        <goal>generate</goal>-->
+                        <!--                                    </goals>-->
+                        <!--                                </execution>-->
+                        <!--                            </executions>-->
+                        <!--                        </plugin>-->
                     </plugins>
                 </pluginManagement>
             </build>
