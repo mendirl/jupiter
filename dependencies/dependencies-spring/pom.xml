@@ -51,6 +51,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Source: https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-contract-dependencies -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-contract-dependencies</artifactId>
+                <version>5.0.3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-dependencies -->
                 <groupId>de.codecentric</groupId>
