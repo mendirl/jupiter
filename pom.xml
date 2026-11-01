@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project root="true" xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 https://maven.apache.org/xsd/maven-4.1.0.xsd">
-    <modelVersion>4.1.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.mendirl</groupId>
     <artifactId>jupiter-parent</artifactId>
@@ -14,10 +14,9 @@
         <revision>999-SNAPSHOT</revision>
     </properties>
 
-    <subprojects>
-        <subproject>spring</subproject>
-    </subprojects>
-
+    <modules>
+        <module>spring</module>
+    </modules>
 
     <scm>
         <url>https://github.com/mendirl/jupiter</url>
