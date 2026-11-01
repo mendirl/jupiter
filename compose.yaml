@@ -1,0 +1,45 @@
+services:
+    kafka:
+        image: dhi.io/kafka:4-dev
+        container_name: kafka
+        ports:
+            - "127.0.0.1:9092:9092"
+
+    postgres:
+        image: dhi.io/postgres:18-dev
+        environment:
+            POSTGRES_PASSWORD: electrix
+            POSTGRES_USER: electrix
+        ports:
+            - "127.0.0.1:5431:5432"
+
+    clickhouse:
+        image: dhi.io/clickhouse-server:25-dev
+        hostname: clickhouse
+        container_name: clickhouse
+        restart: always
+        ports:
+            - "127.0.0.1:8123:8123"
+            - "127.0.0.1:9000:9000"
+            - "127.0.0.1:9009:9009"
+        ulimits:
+            nofile:
+                soft: 262144
+                hard: 262144
+        environment:
+            CLICKHOUSE_USER: fabien
+            CLICKHOUSE_PASSWORD: fabien
+
+    keycloak:
+        image: dhi.io/keycloak:26-dev
+        hostname: keycloak
+        container_name: keycloak
+        restart: always
+        command: start-dev
+        ports:
+            - "127.0.0.1:8081:8080"
+            - "127.0.0.1:8443:8443"
+            - "127.0.0.1:9001:9000"
+        environment:
+            KC_BOOTSTRAP_ADMIN_USERNAME: fabien
+            KC_BOOTSTRAP_ADMIN_PASSWORD: fabien
