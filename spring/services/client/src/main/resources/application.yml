@@ -1,6 +1,0 @@
-server.port: ${jupiter.applications.client.port}
-
-spring:
-  config.import: classpath:config/profile-groups.yml
-  application.name: ${jupiter.applications.client.name}
-  profiles.active: local
