@@ -1,6 +1,3 @@
-
-
-
 package io.mendirl.jupiter.consumer;
 
 import org.springframework.boot.SpringApplication;

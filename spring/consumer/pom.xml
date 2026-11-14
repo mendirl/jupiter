@@ -7,15 +7,9 @@
     <parent>
         <groupId>io.mendirl.jupiter</groupId>
         <artifactId>spring</artifactId>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>consumer</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>
